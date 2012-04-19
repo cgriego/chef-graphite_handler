@@ -3,6 +3,6 @@ maintainer_email "cgriego@gmail.com"
 license          "MIT"
 description      "Installs/Configures chef-handler-graphite"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "1.0.0"
+version          "1.1.0"
 
 depends "chef_handler"

@@ -39,15 +39,6 @@ else
   Gem.clear_paths
 end
 
-# patch older Rubygems (Omnibus) for chef-handler-graphite
-unless Gem::Specification.respond_to? :find_by_name
-  class Gem::Specification
-    def self.find_by_name(name)
-      Gem.source_index.find_name(name).last
-    end
-  end
-end
-
 gem "chef-handler-graphite"
 
 chef_handler "GraphiteReporting" do
