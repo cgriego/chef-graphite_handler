@@ -1,7 +1,14 @@
 Description
 ===========
 
-Report [Chef](http://www.opscode.com/chef) stats to [Graphite](http://graphite.wikidot.com/) using the [chef-handler-graphite gem](https://github.com/imeyer/chef-handler-graphite).
+Report [Chef][1] stats to [Graphite][2] using the [chef-handler-graphite gem][3].
+
+This cookbook uses the `chef_gem` resource added in Chef 0.10.10. If you are using an earlier version of Chef, then you can install the [chef_gem cookbook][4] which backports this functionality.
+
+[1]: http://www.opscode.com/chef
+[2]: http://graphite.wikidot.com/
+[3]: https://github.com/imeyer/chef-handler-graphite
+[4]: http://community.opscode.com/cookbooks/chef_gem
 
 Attributes
 ==========

@@ -26,17 +26,8 @@
 
 include_recipe "chef_handler"
 
-if defined?(Chef::Resources::ChefGem)
-  chef_gem "chef-handler-graphite" do
-    version node["graphite_handler"]["version"]
-  end
-else
-  gem_package "chef-handler-graphite" do
-    action :nothing
-    version node["graphite_handler"]["version"]
-  end.run_action(:install)
-
-  Gem.clear_paths
+chef_gem "chef-handler-graphite" do
+  version node["graphite_handler"]["version"]
 end
 
 gem "chef-handler-graphite"
